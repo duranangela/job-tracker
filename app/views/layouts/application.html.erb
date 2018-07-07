@@ -2,14 +2,14 @@
 <html>
 <head>
   <title>JobTracker</title>
-  <%= stylesheet_link_tag    'application', media: 'all' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% flash.each do |name, msg| %>
+  <p class='flash'><% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: name %>
-  <% end %>
+  <% end %></p>
 <%= yield %>
 
 </body>
