@@ -6,11 +6,10 @@ describe "User visits job page" do
     company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver")
     company.jobs.create!(title: "QA Analyst", level_of_interest: 70, city: "New York City")
 
-    visit company_job_path(company, company.job.first)
+    visit company_job_path(company, company.jobs.first)
     click_link "Delete"
 
-    expect(page).to have_content("#{company.job.first.title} was successfully deleted!")
-    expect(page).to_not have_content('Developer')
-    expect(page).to have_content(company.job.last.title)
+    expect(page).to have_content("Developer was successfully deleted!")
+    expect(page).to have_content(company.jobs.last.title)
   end
 end

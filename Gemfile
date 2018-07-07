@@ -40,6 +40,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'pry'
   gem 'launchy'
+  gem 'database_cleaner'
 end
 
 group :development do
