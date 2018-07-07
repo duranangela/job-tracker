@@ -11,5 +11,8 @@
   <%= f.label :city %>
   <%= f.text_field :city %>
 
+  <%= f.label :category %>
+  <%= f.select(:category, options_for_select([['NEW', 'NEW'], ['OLD', 'OLD']])) %>
+
   <%= f.submit %>
 <% end %>
