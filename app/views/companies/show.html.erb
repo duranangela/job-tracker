@@ -4,4 +4,13 @@
   <ul><%= link_to job.title, job_path(job) %></ul>
 <% end %>
 
+<h3>Contacts</h3>
+<ul>
+  <% @company.contacts.each do |contact| %>
+  <li> <%= contact.full_name  %></li>
+  <li> <%= contact.position  %></li>
+  <li> <%= contact.email  %></li>
+  <% end %>
+</ul></br>
+
 <%= link_to '<< Back to Company List', companies_path %>
