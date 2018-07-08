@@ -6,7 +6,7 @@ describe "User visits job page" do
     category1 = Category.create(title: "jobs")
     job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver", category: category1)
 
-    visit company_job_path(company, job)
+    visit job_path(job)
     click_link('Edit')
 
     fill_in 'job[title]', with: 'Junior Developer'
@@ -15,7 +15,7 @@ describe "User visits job page" do
     fill_in 'job[city]', with: 'Boulder'
     click_button 'Update'
 
-    expect(current_path).to eq("/companies/#{company.id}/jobs/#{job.id}")
+    expect(current_path).to eq("/jobs/#{job.id}")
     expect(page).to have_content("Junior Developer")
     expect(page).to have_content("Pretty cool")
     expect(page).to have_content(75)
