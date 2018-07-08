@@ -41,6 +41,7 @@ describe Job do
   describe 'class methods' do
     it 'can count jobs by level of interest' do
       category1 = Category.create(title: "jobs")
+      company = Company.create(name: 'Kohls')
       company.jobs.create!(title: "Developer", level_of_interest: 3, city: "Denver", category_id: category1.id, company_id: company.id)
       company.jobs.create!(title: "Game Dev", level_of_interest: 4, city: "Denver", category_id: category1.id, company_id: company.id)
       company.jobs.create!(title: "Analyst", level_of_interest: 4, city: "Boulder", category_id: category1.id, company_id: company.id)
