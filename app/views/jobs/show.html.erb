@@ -16,3 +16,10 @@ Category: <%= link_to @job.category.title, category_path(@job.category) %><br/>
 
 <%= link_to "Edit", edit_job_path(@job) %><br/>
 <%= link_to "Delete", job_path(@job), method: "delete" %>
+
+<ul>
+Comments: <% @job.comments.each do |comment| %>
+ <li><%= comment.content %></li>
+ <li><%= comment.created_at %></li>
+<% end %>
+</ul> 
