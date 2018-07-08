@@ -12,7 +12,7 @@
   <%= f.text_field :city %>
 
   <%= f.label :category %>
-  <%= f.select(:category, options_for_select([['NEW', 'NEW'], ['OLD', 'OLD']])) %>
+  <%= collection_select(:job, :category_id, Category.all, :id, :title) %>
 
   <%= f.submit %>
 <% end %>
