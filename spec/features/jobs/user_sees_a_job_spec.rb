@@ -6,7 +6,7 @@ describe "User sees a specific job" do
     category1 = Category.create(title: "jobs")
     job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver", category: category1)
 
-    visit company_path(company)
+    visit jobs_path
     click_link(job.title)
 
     expect(page).to have_content("ESPN")
