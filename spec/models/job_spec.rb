@@ -37,4 +37,16 @@ describe Job do
     it {should belong_to(:category)}
     it {should have_many(:comments)}
   end
+
+  describe 'class methods' do
+    it 'can count jobs by level of interest' do
+      category1 = Category.create(title: "jobs")
+      company.jobs.create!(title: "Developer", level_of_interest: 3, city: "Denver", category_id: category1.id, company_id: company.id)
+      company.jobs.create!(title: "Game Dev", level_of_interest: 4, city: "Denver", category_id: category1.id, company_id: company.id)
+      company.jobs.create!(title: "Analyst", level_of_interest: 4, city: "Boulder", category_id: category1.id, company_id: company.id)
+
+      expect(Job.sort_by_level_of_interest(4)).to eq(2)
+      expect(Job.sort_by_level_of_interest(3)).to eq(1)
+    end
+  end
 end
