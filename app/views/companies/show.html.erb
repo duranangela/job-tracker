@@ -2,7 +2,20 @@
 
 <% @company.jobs.each do |job| %>
   <ul><%= link_to job.title, job_path(job) %></ul>
-<% end %>
+<% end %></br></br>
+
+<%= form_for [@company, @contact] do |f| %>
+  <%= f.label :full_name %>
+  <%= f.text_field :full_name %>
+
+  <%= f.label :position %>
+  <%= f.text_field :position %>
+
+  <%= f.label :email%>
+  <%= f.text_field :email%>
+
+  <%= f.submit %>
+<% end %><br/><br/>
 
 <h3>Contacts</h3>
 <ul>
