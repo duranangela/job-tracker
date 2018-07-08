@@ -35,5 +35,6 @@ describe Job do
       expect(job).to respond_to(:company)
     end
     it {should belong_to(:category)}
+    it {should have_many(:comments)}
   end
 end
