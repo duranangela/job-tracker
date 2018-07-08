@@ -21,6 +21,7 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+    @comment = @job.comments.new
   end
 
   def edit
@@ -41,7 +42,7 @@ class JobsController < ApplicationController
 
   def destroy
     job = Job.find(params[:id])
-    company = job.company
+    # company = job.company
     job.destroy
 
     flash[:success] = "#{job.title} was successfully deleted!"
@@ -51,6 +52,6 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :level_of_interest, :city)
+    params.require(:job).permit(:title, :description, :level_of_interest, :city, :category_id, :company_id)
   end
 end
