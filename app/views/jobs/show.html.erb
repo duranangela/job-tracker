@@ -17,6 +17,7 @@ Category: <%= link_to @job.category.title, category_path(@job.category) %><br/>
 <%= link_to "Edit", edit_job_path(@job) %><br/>
 <%= link_to "Delete", job_path(@job), method: "delete" %>
 
+<br/><br/>
 <%= form_for [@job, @comment] do |f| %>
   <%= f.label :content %>
   <%= f.text_field :content %>
@@ -24,9 +25,8 @@ Category: <%= link_to @job.category.title, category_path(@job.category) %><br/>
   <%= f.submit %>
 <% end %><br/><br/>
 
-<ul>
-Comments: <% @job.comments.each do |comment| %>
- <li><%= comment.content %></li>
- <li><%= comment.created_at %></li>
-<% end %>
+<ul>Comments: <% @comments.each do |comment| %>
+   <li><%= comment.content %></li>
+   <li><%= comment.created_at %></li>
+  <% end %>
 </ul>

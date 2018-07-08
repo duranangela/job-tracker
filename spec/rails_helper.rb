@@ -35,6 +35,10 @@ end
 
 RSpec.configure do |config|
 
+  config.mock_with :rspec do |mocks|
+    mocks.syntax = [:expect, :should]
+  end
+
   config.before(:suite) do
    DatabaseCleaner.strategy = :transaction
    DatabaseCleaner.clean_with(:truncation)

@@ -42,6 +42,7 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
+  gem 'rspec-mocks'
 end
 
 group :development do

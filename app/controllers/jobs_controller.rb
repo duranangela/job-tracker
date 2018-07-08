@@ -1,6 +1,5 @@
 class JobsController < ApplicationController
   def index
-    # @company = Company.find(params[:company_id])
     @jobs = Job.all
   end
 
@@ -9,7 +8,6 @@ class JobsController < ApplicationController
   end
 
   def create
-    # @company = Company.find(params[:company_id])
     @job = Job.new(job_params)
     if @job.save
       flash[:success] = "You created #{@job.title}"
@@ -22,6 +20,7 @@ class JobsController < ApplicationController
   def show
     @job = Job.find(params[:id])
     @comment = @job.comments.new
+    @comments = @job.comments.order_by_date
   end
 
   def edit
