@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :companies
+  resources :companies do
+    resources :contacts
+  end 
   resources :jobs do
     resources :comments
   end
