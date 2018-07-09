@@ -21,6 +21,7 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
     @contact = @company.contacts.new
     @company_jobs = @company.jobs
+    @company_contacts = @company.contacts
     # redirect_to company_path(company)
   end
 
