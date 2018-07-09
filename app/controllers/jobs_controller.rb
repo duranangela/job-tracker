@@ -19,6 +19,8 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+    @company = @job.company
+    @category = @job.category
     @comment = @job.comments.new
     @comments = @job.comments.order_by_date
   end
