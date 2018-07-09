@@ -6,25 +6,26 @@
 
 <h3><%= link_to "Create a new job", new_job_path %></h3><br/>
 
-<h3>Contacts</h3><br/>
-<%= form_for [@company, @contact] do |f| %>
-  <%= f.label :full_name %>
-  <%= f.text_field :full_name %>
+<div class='contacts'>
+  <h3>Contacts</h3><br/>
+  <%= form_for [@company, @contact] do |f| %>
+    <%= f.label :full_name %>
+    <%= f.text_field :full_name %>
 
-  <%= f.label :position %>
-  <%= f.text_field :position %>
+    <%= f.label :position %>
+    <%= f.text_field :position %>
 
-  <%= f.label :email%>
-  <%= f.text_field :email%>
+    <%= f.label :email%>
+    <%= f.text_field :email%>
 
-  <%= f.submit %>
-<% end %><br/><br/>
+    <%= f.submit %>
+  <% end %><br/><br/>
 
-  <% @company_contacts.each do |contact| %>
-    <%= contact.full_name  %>
-    <%= contact.position  %>
-    <%= contact.email  %>
-  <% end %>
-</br></br>
-
+    <% @company_contacts.each do |contact| %>
+      <%= contact.full_name  %>
+      <%= contact.position  %>
+      <%= contact.email  %>
+    <% end %>
+  </br></br>
+</div>
 <%= link_to '<< Back to Company List', companies_path %>
