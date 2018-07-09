@@ -1,0 +1,16 @@
+body {
+  background-color: #C6C5B9;
+}
+
+nav {
+  background-color: #62929E;
+  display: inline-block;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+nav li {
+  display: inline;
+}

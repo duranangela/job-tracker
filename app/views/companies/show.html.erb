@@ -1,9 +1,12 @@
-<h1>All Jobs for <strong><%= @company.name %></strong></h1>
+<h1><strong><%= @company.name %></strong></h1>
 
 <% @company_jobs.each do |job| %>
   <ul><%= link_to job.title, job_path(job) %></ul>
 <% end %></br></br>
 
+<h3><%= link_to "Create a new job", new_job_path %></h3><br/>
+
+<h3>Contacts</h3><br/>
 <%= form_for [@company, @contact] do |f| %>
   <%= f.label :full_name %>
   <%= f.text_field :full_name %>
@@ -17,13 +20,11 @@
   <%= f.submit %>
 <% end %><br/><br/>
 
-<h3>Contacts</h3>
-<ul>
   <% @company_contacts.each do |contact| %>
-  <li> <%= contact.full_name  %></li>
-  <li> <%= contact.position  %></li>
-  <li> <%= contact.email  %></li>
+    <%= contact.full_name  %>
+    <%= contact.position  %>
+    <%= contact.email  %>
   <% end %>
-</ul></br>
+</br></br>
 
 <%= link_to '<< Back to Company List', companies_path %>
