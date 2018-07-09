@@ -46,8 +46,9 @@ describe Job do
       company.jobs.create!(title: "Game Dev", level_of_interest: 4, city: "Denver", category_id: category1.id, company_id: company.id)
       company.jobs.create!(title: "Analyst", level_of_interest: 4, city: "Boulder", category_id: category1.id, company_id: company.id)
 
-      expect(Job.sort_by_level_of_interest(4)).to eq(2)
-      expect(Job.sort_by_level_of_interest(3)).to eq(1)
+      expected_result = {3=>1, 4=>2}
+
+      expect(Job.sort_by_level_of_interest).to eq(expected_result)
     end
   end
 end

@@ -1,6 +1,6 @@
 <h1><strong><%= @company.name %></strong></h1>
 
-<% @company.jobs.each do |job| %>
+<% @company_jobs.each do |job| %>
   <ul><%= link_to job.title, job_path(job) %></ul>
 <% end %></br></br>
 
@@ -20,7 +20,7 @@
   <%= f.submit %>
 <% end %><br/><br/>
 
-  <% @company.contacts.each do |contact| %>
+  <% @company_contacts.each do |contact| %>
     <%= contact.full_name  %>
     <%= contact.position  %>
     <%= contact.email  %>
