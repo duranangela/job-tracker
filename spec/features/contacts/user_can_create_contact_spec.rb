@@ -9,7 +9,9 @@ describe 'a user visits a company show page' do
     fill_in 'contact[full_name]', with: 'John Boe'
     fill_in 'contact[position]', with: 'Manager'
     fill_in 'contact[email]', with: 'johnboe@yahoo.com'
-    click_on 'Create'
+    within('.contacts') do
+      click_on 'Create'
+    end
 
     expect(page).to have_content('John Boe')
     expect(page).to have_content('Manager')
