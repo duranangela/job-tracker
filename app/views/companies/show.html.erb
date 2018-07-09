@@ -1,6 +1,6 @@
 <h1>All Jobs for <strong><%= @company.name %></strong></h1>
 
-<% @company.jobs.each do |job| %>
+<% @company_jobs.each do |job| %>
   <ul><%= link_to job.title, job_path(job) %></ul>
 <% end %></br></br>
 
@@ -19,7 +19,7 @@
 
 <h3>Contacts</h3>
 <ul>
-  <% @company.contacts.each do |contact| %>
+  <% @company_contacts.each do |contact| %>
   <li> <%= contact.full_name  %></li>
   <li> <%= contact.position  %></li>
   <li> <%= contact.email  %></li>
