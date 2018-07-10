@@ -1,30 +1,28 @@
-<h1><%= @job.title %> at <%= link_to @company.name, company_path(@company.name) %></h1>
-<%= link_to "Edit", edit_job_path(@job) %>
-<%= link_to "Delete", job_path(@job), method: "delete" %><br/>
+<div class=page>
+  <h1 class='title-line'><%= @job.title %> at <%= link_to @company.name, company_path(@company) %></h1>
+  <p class='title-line'><%= link_to "Edit", edit_job_path(@job) %></p>
+  <p class='title-line'><%= link_to "Delete", job_path(@job), method: "delete" %></p>
 
-<h3><%= link_to "See other #{@category.title} jobs", category_path(@category) %></h3>
-<h3><%= link_to "All jobs", jobs_path %></h3>
+  <p>City: <%= @job.city %></p>
 
-City: <%= @job.city %></br>
+  <p>Level of Interest: <%= @job.level_of_interest %></p>
 
-Level of Interest: <%= @job.level_of_interest %></br>
+  <% if @job.description != ""%>
+  <p>Description: <%= @job.description %></p>
+  <% end %>
+  <h3><%= link_to "See other #{@category.title} jobs", category_path(@category) %></h3>
 
-<% if @job.description != ""%>
-Description: <%= @job.description %><br/>
-<% end %>
+  <br/><br/>
+  Comments: <br/><br/>
+  <%= form_for [@job, @comment] do |f| %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
 
+    <%= f.submit %>
+  <% end %><br/>
 
-
-<br/><br/><br/>
-Comments: <br/><br/>
-<%= form_for [@job, @comment] do |f| %>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
-
-  <%= f.submit %>
-<% end %><br/>
-
-<% @comments.each do |comment| %>
-  <%= comment.content %>
-  <%= comment.created_at %><br/><br/>
-<% end %>
+  <% @comments.each do |comment| %>
+    <%= comment.content %>
+    <%= comment.created_at %><br/><br/>
+  <% end %>
+</div>
