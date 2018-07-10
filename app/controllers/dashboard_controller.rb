@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
     @jobs = Job.all
     @companies = Company.all
     @level_of_interest = Job.sort_by_level_of_interest
-    @top_three_companies = Company.top_three_company_by_interest 
+    @top_three_companies = Company.top_three_company_by_interest
   end
 
 end
