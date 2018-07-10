@@ -8,5 +8,7 @@ class Job < ApplicationRecord
     group(:level_of_interest).order('level_of_interest DESC').count
   end
 
-  
+  def self.sort_level_interest
+    group(:level_of_interest)
+  end
 end
