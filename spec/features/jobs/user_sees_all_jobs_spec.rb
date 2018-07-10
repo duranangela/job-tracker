@@ -22,11 +22,13 @@ describe "User sees all jobs" do
     job3 = company.jobs.create(title: "Analyst", level_of_interest: 2, city: "Seattle", category: category1)
 
     visit '/jobs?sort=interest'
-    save_and_open_page
 
-    expect(page).to have_text("#{job2.level_of_interest} #{job1.level_of_interest} #{job3.level_of_interest}")
+    expected_result = ["job2", 'job1', 'job3']
 
-    # expect(page).to have_content("#{job1.title} at #{job1.company.name}\n#{job1.city}\n#{job1.level_of_interest}\n#{job2.title} at #{job2.company.name}\n#{job2.city}\n#{job2.level_of_interest}\n#{job3.title} at #{job3.company.name}\n#{job3.city}\n#{job3.level_of_interest}")
+    page.body.index(job2.city).should < page.body.index(job1.city)
+
+    page.body.index(job1.city).should < page.body.index(job3.city)
+
   end
 
   it 'user sees jobs listed by city query' do
