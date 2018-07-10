@@ -7,6 +7,8 @@
 </ul>
 <% end %>
 
-<%= @top_three_companies.each do |company| %>
-  <%= company.name %> 
+<% @top_three_companies.each do |company| %>
+<ul>
+  <li><%= company.name %> <%= company.jobs.average(:level_of_interest) %></li>
+</ul>
 <% end %>
