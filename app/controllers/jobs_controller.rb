@@ -1,6 +1,15 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all
+    if params[:city]
+      @jobs = Job.where(city: params[:city])
+      @header = "#{params[:city]} Jobs"
+    # elsif params[:category]
+    #   @jobs = Job.where(category_id: params[:category])
+    #   @header = Category.find(params[:category]).title
+    else
+      @jobs = Job.all
+      @header = "All Jobs"
+    end
   end
 
   def new
