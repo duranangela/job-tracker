@@ -7,6 +7,9 @@ class JobsController < ApplicationController
       cat = Category.where(title: params[:category]).first.id
       @jobs = Job.where(category_id: cat)
       @header = "#{params[:category]} Jobs"
+    elsif params[:sort]
+      @jobs = Job.sort_level_interest.where(level_of_interest: params[:sort])
+      @header = "#{params[:sort]} Jobs"
     else
       @jobs = Job.all
       @header = "All Jobs"
