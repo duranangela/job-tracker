@@ -7,4 +7,11 @@
     <li>Interest level <%= interest %> = <%= count %> job(s) </li>
   </ul>
   <% end %>
+
+  <% @top_three_companies.each do |company| %>
+  <ul>
+    <li><%= company.name %> <%= company.jobs.average(:level_of_interest) %></li>
+  </ul>
+  <% end %>
 </div>
+
