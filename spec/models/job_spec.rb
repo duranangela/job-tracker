@@ -50,6 +50,16 @@ describe Job do
 
       expect(Job.sort_by_level_of_interest).to eq(expected_result)
     end
+    it 'can sort by city' do
+      category1 = Category.create(title: "jobs")
+      company = Company.create(name: 'Kohls')
+      job1 = company.jobs.create!(title: "Developer", level_of_interest: 3, city: "Denver", category_id: category1.id, company_id: company.id)
+      job2 = company.jobs.create!(title: "Game Dev", level_of_interest: 4, city: "Denver", category_id: category1.id, company_id: company.id)
+      job3 = company.jobs.create!(title: "Analyst", level_of_interest: 4, city: "Boulder", category_id: category1.id, company_id: company.id)
 
+      expected_result = {'Denver'=>2, 'Boulder'=>1}
+
+      expect(Job.sort_by_city).to eq(expected_result)
+    end
   end
 end
