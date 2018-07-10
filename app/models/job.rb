@@ -11,4 +11,8 @@ class Job < ApplicationRecord
   def self.sort_level_interest
     group(:level_of_interest)
   end
+
+  def self.sort_by_city
+    all.group(:city).count
+  end
 end

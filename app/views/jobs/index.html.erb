@@ -1,10 +1,9 @@
 <div class='page'>
-  <h1>All Jobs</h1>
+  <h1><%= @header %></h1>
 
   <% @jobs.each do |job| %>
     <p><%= link_to "#{job.title} at #{job.company.name}", job_path(job) %></p>
   <% end %><br/>
 
-  <%= link_to 'Create a New Job', new_job_path %><br/><br/>
-  <%= link_to '<< Back to Company List', companies_path %>
+  <h4><%= link_to 'Create a New Job', new_job_path %></h4><br/><br/>
 </div>

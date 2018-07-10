@@ -6,9 +6,7 @@ describe 'user can delete category' do
 
     visit categories_path
 
-    within(".category_#{category.id}") do
-      click_link "Delete"
-    end
+    click_link "Delete"
 
     expect(page).to have_content("#{category.title} was successfully deleted!")
   end
