@@ -3,6 +3,10 @@
 
   <% @jobs.each do |job| %>
     <p><%= link_to "#{job.title} at #{job.company.name}", job_path(job) %></p>
+    <ul>
+      <li><%= job.city %></li>
+      <li>Level of interest: <%= job.level_of_interest %></li>
+    </ul>
   <% end %><br/>
 
   <h4><%= link_to 'Create a New Job', new_job_path %></h4><br/><br/>
