@@ -23,8 +23,9 @@ describe 'user visits dashboard page' do
       company_1.jobs.create!(title: "Game Dev", level_of_interest: 5, city: "Denver", category_id: category1.id, company_id: company_1.id)
       company_2.jobs.create!(title: "Analyst", level_of_interest: 2, city: "Boulder", category_id: category1.id, company_id: company_2.id)
 
+
       visit dashboard_index_path
 
-      expect(page).to have_text("#{company_1.name} #{company_2.name}")
+      expect(page).to have_text("#{company_1.name} 4.0 #{company_2.name} 2.0")
   end
 end

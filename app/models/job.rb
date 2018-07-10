@@ -8,4 +8,5 @@ class Job < ApplicationRecord
     group(:level_of_interest).order('level_of_interest DESC').count
   end
 
+  
 end
