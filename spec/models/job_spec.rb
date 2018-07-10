@@ -50,5 +50,6 @@ describe Job do
 
       expect(Job.sort_by_level_of_interest).to eq(expected_result)
     end
+
   end
 end

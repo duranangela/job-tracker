@@ -6,3 +6,7 @@
   <li>Interest level <%= interest %> = <%= count %> job(s) </li>
 </ul>
 <% end %>
+
+<%= @top_three_companies.each do |company| %>
+  <%= company.name %> 
+<% end %>
