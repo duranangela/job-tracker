@@ -13,6 +13,6 @@
 
 
   <% @city_sort.each do |city, number| %>
-    <p><%= "#{city} - #{number} job(s)" %> </p>
+    <p><%= link_to city, "/jobs?city=#{city}" %> <%= " - #{number} job(s)" %> </p>
   <% end %>
 </div>
