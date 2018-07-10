@@ -15,4 +15,8 @@ class Job < ApplicationRecord
   def self.sort_by_city
     all.group(:city).count
   end
+
+  def self.city_sort
+    order('city ASC')
+  end
 end
