@@ -3,9 +3,10 @@ class JobsController < ApplicationController
     if params[:location]
       @jobs = Job.where(city: params[:location])
       @header = "#{params[:location]} Jobs"
-    # elsif params[:category]
-    #   @jobs = Job.where(category_id: params[:category])
-    #   @header = Category.find(params[:category]).title
+    elsif params[:category]
+      cat = Category.where(title: params[:category]).first.id
+      @jobs = Job.where(category_id: cat)
+      @header = "#{params[:category]} Jobs"
     else
       @jobs = Job.all
       @header = "All Jobs"
