@@ -9,7 +9,7 @@ class Job < ApplicationRecord
   end
 
   def self.sort_level_interest
-    group(:level_of_interest)
+    order('level_of_interest DESC')
   end
 
   def self.sort_by_city
