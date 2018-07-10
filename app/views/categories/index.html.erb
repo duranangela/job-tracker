@@ -1,13 +1,13 @@
-<h1>Job Categories</h1>
+<div class='page'>
+  <h1>Job Categories</h1>
 
-<div>
-  <% @categories.each do |category| %>
-  <div class=category_<%= category.id %>>
-    <%= link_to category.title, category_path(category) %>:
-    <%= link_to "Edit", edit_category_path(category) %>
-    <%= link_to "Delete", category_path(category), method: "delete" %>
+  <div class='categories'>
+    <% @categories.each do |category| %>
+      <p><%= link_to category.title, category_path(category) %></p>
+      <p><%= link_to "Edit", edit_category_path(category) %></p>
+      <p><%= link_to "Delete", category_path(category), method: "delete" %></p><br/><br/>
+    <% end %>
   </div>
-  <% end %>
-</div>
 
-<h4><%= link_to 'Create a New Category', new_category_path %></h4>
+  <h4><%= link_to 'Create a New Category', new_category_path %></h4>
+</div>

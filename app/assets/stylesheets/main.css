@@ -1,5 +1,6 @@
 body {
   background-color: #C6C5B9;
+  font-family: verdana;
 }
 
 nav {
@@ -11,6 +12,37 @@ nav {
   padding: 10px;
 }
 
+nav p {
+  float: left;
+  font-size: 25px;
+}
+
 nav li {
   display: inline;
+  float: right;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+nav li a {
+  padding: 15px;
+}
+
+.page {
+  padding: 20px;
+}
+
+.title-line {
+  display: inline;
+  padding-right: 10px;
+}
+
+.companies p {
+  display: inline;
+  padding-right: 10px;
+}
+
+.categories p {
+  display: inline;
+  padding-right: 10px;
 }

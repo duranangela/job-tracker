@@ -1,8 +1,10 @@
-<h1>Job Tracker</h1>
+<div class='page'>
+  <h1>Job Tracker</h1>
 
-<h3> Jobs by Interest </h3>
-<% @level_of_interest.each do |interest, count|  %>
-<ul>
-  <li>Interest level <%= interest %> = <%= count %> job(s) </li>
-</ul>
-<% end %>
+  <h3> Jobs by Interest </h3>
+  <% @level_of_interest.each do |interest, count|  %>
+  <ul>
+    <li>Interest level <%= interest %> = <%= count %> job(s) </li>
+  </ul>
+  <% end %>
+</div>

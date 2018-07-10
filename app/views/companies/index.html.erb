@@ -1,13 +1,13 @@
-<h3>All Companies</h3>
+<div class='page'>
+  <h1>All Companies</h1>
 
-<ul>
-  <% @companies.each do |company| %>
-  <li class=company_<%= company.id %>>
-    <%= link_to company.name, company_path(company) %>:
-    <%= link_to "Edit", edit_company_path(company) %>
-    <%= link_to "Delete", company_path(company), method: "delete" %>
-  </li>
-  <% end %>
-</ul>
+  <div class='companies'>
+    <% @companies.each do |company| %>
+      <p><%= link_to company.name, company_path(company) %></p>
+      <p><%= link_to "Edit", edit_company_path(company) %></p>
+      <p><%= link_to "Delete", company_path(company), method: "delete" %></p><br/><br/>
+    <% end %>
+  </div>
 
-<h4><%= link_to 'Create a New Company', new_company_path %></h4>
+  <h4><%= link_to 'Create a New Company', new_company_path %></h4>
+</div>
