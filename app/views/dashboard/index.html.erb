@@ -3,15 +3,16 @@
 
   <h3> Jobs by Interest </h3>
   <% @level_of_interest.each do |interest, count|  %>
-  <ul>
-    <li>Interest level <%= interest %> = <%= count %> job(s) </li>
-  </ul>
-  <% end %>
+    <p>Interest level <%= interest %> = <%= count %> job(s) </p>
+  <% end %><br>
 
+  <h3>Top Companies by Interest Level</h3>
   <% @top_three_companies.each do |company| %>
-  <ul>
-    <li><%= company.name %> <%= company.jobs.average(:level_of_interest) %></li>
-  </ul>
+    <p><%= company.name %> <%= company.jobs.average(:level_of_interest) %></p>
+  <% end %><br/>
+
+
+  <% @city_sort.each do |city, number| %>
+    <p><%= "#{city} - #{number} job(s)" %> </p>
   <% end %>
 </div>
-
