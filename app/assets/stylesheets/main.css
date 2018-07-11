@@ -207,3 +207,8 @@ h1 {
   height: 300px;
   font-size: 30px;
 }
+
+.show_category {
+  text-align: center;
+  padding: 10px;
+}
