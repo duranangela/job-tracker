@@ -8,7 +8,7 @@
     <% end %><br>
   </section>
 
-  <section id="box_companies"
+  <section id="box_companies">
     <h3>Top Companies by Interest Level</h3>
     <% @top_three_companies.each do |company| %>
       <p><%= company.name %> <%= company.job_avg_lvl_interest.round(1) %></p>
