@@ -74,3 +74,19 @@ nav li a {
   flex-direction: row;
   flex-direction: wrap;
 }
+
+.index_job h1 {
+  text-align: center;
+  background: yellow;
+}
+
+.index_job ul {
+  padding-left: 450px;
+  font-family: 'Herculanum';
+}
+
+.index_job p {
+  padding-left: 450px;
+  font-family: "Herculanum";
+  font-size: 25px;
+}
