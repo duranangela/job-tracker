@@ -236,3 +236,18 @@ h1 {
 .index_cat h4 {
   padding-top: 150px;
 }
+
+.edit_cat h2 {
+  text-align: center;
+  background: yellow;
+  height: 40px;
+}
+
+.form_edit {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.edit_cat h3 {
+  padding-top: 200px;
+}
