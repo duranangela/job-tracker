@@ -187,3 +187,7 @@ h1 {
 .new_company h4 {
   text-align: left;
 }
+
+.show_company {
+  text-align: center;
+}
