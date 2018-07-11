@@ -19,4 +19,12 @@ class Job < ApplicationRecord
   def self.city_sort
     order('city ASC')
   end
+
+  def self.location_params(params)
+    where(city: params[:location])
+  end
+
+  def self.category_params(params)
+    where(category_id:(Category.where(title: params[:category]).first.id))
+  end
 end

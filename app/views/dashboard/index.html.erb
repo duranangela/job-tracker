@@ -11,10 +11,10 @@
   <section id="box_companies"
     <h3>Top Companies by Interest Level</h3>
     <% @top_three_companies.each do |company| %>
-      <p><%= company.name %> <%= company.jobs.average(:level_of_interest) %></p>
+      <p><%= company.name %> <%= company.jobs.average(:level_of_interest).round(1) %></p>
     <% end %><br/>
   </section>
-
+  
   <section id="box_cities">
     <% @city_sort.each do |city, number| %>
       <p><%= link_to city, "/jobs?location=#{city}" %> <%= " - #{number} job(s)" %> </p>
