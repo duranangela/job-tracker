@@ -1,5 +1,5 @@
 body {
-  background-color: #C6C5B9;
+  background-color: #FFA542;
   font-family: 'Monaco';
 }
 
@@ -82,7 +82,7 @@ nav li a {
 
 .index_job h1 {
   text-align: center;
-  background: yellow;
+  background: #FFAE5C;
 }
 
 .index_job ul {
