@@ -1,7 +1,9 @@
 <section class="new_category">
-  <h2> Create a new category here!</h2>
+  <h1> Create a new category here!</h1>
 
     <%= render partial: "form" %><br/>
 
-  <h4><%= link_to '<< Back to Category List', categories_path %></h4>
+  <div class="back_button">
+    <%= link_to '<< Back to Category List', categories_path %>
+  </div>
 </section>

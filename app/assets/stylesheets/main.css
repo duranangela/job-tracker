@@ -58,18 +58,12 @@ nav li a {
   padding-right: 10px;
 }
 
-.new_job h2 {
-  font-size: 25px;
-  font-family: 'Monaco';
-  text-align: center;
-  background: yellow;
-  height: 40px;
-}
 .new_job h3 {
   font-size: 20px;
   font-family: Georgia sans-serif;
   text-align: right;
 }
+
 .new_job h4 {
   font-size: 20px;
   font-family: Georgia sans-serif;
@@ -85,47 +79,31 @@ nav li a {
   flex-direction: wrap;
 } */
 
-.index_job h1 {
-  text-align: center;
-  background: #FFAE5C;
-}
-
 .index_job ul {
-  padding-left: 450px;
-  font-family: 'Herculanum';
+  padding-left: 520px;
+  font-family: Georgia;
 }
 
 .index_job p {
-  padding-left: 350px;
-  font-family: "Herculanum";
+  padding-left: 450px;
+  font-family: Georgia;
   font-size: 25px;
 }
 
 .show_job h4 {
   text-align: right;
   font-size: 14px;
-}
-
-.show_job h1 {
-  text-align: center;
-  background: yellow;
+  font-family: Georgia;
 }
 
 .show_job p {
   text-align: center;
   font-size: 18px;
+  font-family: Georgia;
 }
 
 .show_job h3 {
   font-size: 12px;
-}
-
-.edit_job h2 {
-  font-family: 'Monaco';
-  background: yellow;
-  font-size: 25px;
-  height: 50px;
-  text-align: center;
 }
 
 .edit_job h4 {
@@ -136,9 +114,10 @@ nav li a {
 
 h1 {
   text-align: center;
-  background: yellow;
+  background: #FFAE5C;
   height: 50px;
 }
+
 .dashboard_page {
   display: flex;
   flex-direction: row;
@@ -148,27 +127,24 @@ h1 {
 }
 
 #box_companies {
-  border-color: black;
   border-radius: 25px;
-  border: 2px solid LightCoral;
+  border: 2px solid #996935;
   padding: 20px;
   width: 200px;
   height: 170px;
 }
 
 #box_interest {
-  border-color: black;
   border-radius: 25px;
-  border: 2px solid LightCoral;
+  border: 2px solid #996935;
   padding: 20px;
   width: 200px;
   height: 170px;
 }
 
 #box_cities {
-  border-color: black;
   border-radius: 25px;
-  border: 2px solid LightCoral;
+  border: 2px solid #996935;
   padding: 20px;
   width: 200px;
   height: 170px;
@@ -177,17 +153,6 @@ h1 {
 .contacts {
   text-align: center;
 }
-
-.new_company h2 {
-  text-align: center;
-  background: yellow;
-  height: 50px;
-}
-
-/* .form_create_comp {
-  text-align: center;
-  font-size: 30px;
-} */
 
 .new_company h4 {
   text-align: left;
@@ -201,12 +166,6 @@ h1 {
   text-align: center;
 }
 
-.edit_company h2 {
-  text-align: center;
-  background: yellow;
-  height: 40px;
-}
-
 .edit_form {
   text-align: center;
   height: 300px;
@@ -216,11 +175,6 @@ h1 {
 .show_category {
   text-align: center;
   padding: 10px;
-}
-
-.new_category h2 {
-  text-align: center;
-  background: yellow;
 }
 
 #company_form {
@@ -240,12 +194,6 @@ h1 {
 
 .index_cat h4 {
   padding-top: 150px;
-}
-
-.edit_cat h2 {
-  text-align: center;
-  background: yellow;
-  height: 40px;
 }
 
 .form_edit {
