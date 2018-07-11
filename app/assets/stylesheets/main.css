@@ -195,3 +195,15 @@ h1 {
 .companies {
   text-align: center;
 }
+
+.edit_company h2 {
+  text-align: center;
+  background: yellow;
+  height: 40px;
+}
+
+.edit_form {
+  text-align: center;
+  height: 300px;
+  font-size: 30px;
+}
