@@ -29,6 +29,11 @@ nav li a {
   padding: 15px;
 }
 
+.job_form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .page {
   padding: 20px;
 }
@@ -108,4 +113,18 @@ nav li a {
 
 .show_job h3 {
   font-size: 12px;
+}
+
+.edit_job h2 {
+  font-family: 'Monaco';
+  background: yellow;
+  font-size: 25px;
+  height: 50px;
+  text-align: center;
+}
+
+.edit_job h4 {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
 }
