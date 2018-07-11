@@ -2,7 +2,9 @@
 
 <section class="show_category">
   <% @jobs.each do |job| %>
-    <%= link_to "#{job.title} at #{job.company.name}", job_path(job) %><br/>
+    <div class="show_every_jobs">
+      <%= link_to "#{job.title} at #{job.company.name}", job_path(job) %><br/>
+    </div>
   <% end %>
   <br/><br/>
 </section>
