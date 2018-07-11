@@ -11,4 +11,8 @@ class Company < ApplicationRecord
     .limit(3)
   end
 
+  def job_avg_lvl_interest
+    jobs.average(:level_of_interest)
+  end
+
 end

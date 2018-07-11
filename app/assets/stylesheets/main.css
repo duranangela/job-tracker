@@ -29,9 +29,14 @@ nav li a {
   padding: 15px;
 }
 
-.job_form {
-  display: flex;
-  flex-wrap: wrap;
+.form {
+  display: grid;
+  justify-content: center;
+}
+
+.form div {
+  padding: 20px;
+  align-content: left;
 }
 
 .page {
@@ -67,12 +72,12 @@ nav li a {
   align-items: flex-start;
 }
 
-#new_form {
+/* #new_form {
   font-size: 20px;
   display: flex;
   flex-direction: row;
   flex-direction: wrap;
-}
+} */
 
 .index_job ul {
   padding-left: 520px;
@@ -147,11 +152,6 @@ h1 {
 
 .contacts {
   text-align: center;
-}
-
-.form_create_comp {
-  text-align: center;
-  font-size: 30px;
 }
 
 .new_company h4 {
