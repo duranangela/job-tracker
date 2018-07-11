@@ -1,18 +1,24 @@
-<div class='page'>
   <h1>Job Tracker</h1>
 
-  <h3> Jobs by Interest </h3>
-  <% @level_of_interest.each do |interest, count|  %>
-    <p>Interest level <%= interest %> = <%= count %> job(s) </p>
-  <% end %><br>
+  <div class='dashboard_page'>
+  <section id="box_interest">
+    <h3> Jobs by Interest </h3>
+    <% @level_of_interest.each do |interest, count|  %>
+      <p>Interest level <%= interest %> = <%= count %> job(s) </p>
+    <% end %><br>
+  </section>
 
-  <h3>Top Companies by Interest Level</h3>
-  <% @top_three_companies.each do |company| %>
-    <p><%= company.name %> <%= company.jobs.average(:level_of_interest) %></p>
-  <% end %><br/>
+  <section id="box_companies"
+    <h3>Top Companies by Interest Level</h3>
+    <% @top_three_companies.each do |company| %>
+      <p><%= company.name %> <%= company.jobs.average(:level_of_interest) %></p>
+    <% end %><br/>
+  </section>
 
+  <section id="box_cities">
+    <% @city_sort.each do |city, number| %>
+      <p><%= link_to city, "/jobs?location=#{city}" %> <%= " - #{number} job(s)" %> </p>
+    <% end %>
+  </section>
 
-  <% @city_sort.each do |city, number| %>
-    <p><%= link_to city, "/jobs?location=#{city}" %> <%= " - #{number} job(s)" %> </p>
-  <% end %>
 </div>
