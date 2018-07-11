@@ -57,7 +57,7 @@ nav li a {
   font-size: 25px;
   font-family: 'Monaco';
   text-align: center;
-  background: yellow;
+  background: #FFAE5C;
   height: 40px;
 }
 .new_job h3 {
@@ -103,7 +103,7 @@ nav li a {
 
 .show_job h1 {
   text-align: center;
-  background: yellow;
+  background: #FFAE5C;
 }
 
 .show_job p {
@@ -117,7 +117,7 @@ nav li a {
 
 .edit_job h2 {
   font-family: 'Monaco';
-  background: yellow;
+  background: #FFAE5C;
   font-size: 25px;
   height: 50px;
   text-align: center;
@@ -131,7 +131,7 @@ nav li a {
 
 h1 {
   text-align: center;
-  background: yellow;
+  background: #FFAE5C;
   height: 50px;
 }
 .dashboard_page {
@@ -143,27 +143,24 @@ h1 {
 }
 
 #box_companies {
-  border-color: black;
   border-radius: 25px;
-  border: 2px solid LightCoral;
+  border: 2px solid #996935;
   padding: 20px;
   width: 200px;
   height: 170px;
 }
 
 #box_interest {
-  border-color: black;
   border-radius: 25px;
-  border: 2px solid LightCoral;
+  border: 2px solid #996935;
   padding: 20px;
   width: 200px;
   height: 170px;
 }
 
 #box_cities {
-  border-color: black;
   border-radius: 25px;
-  border: 2px solid LightCoral;
+  border: 2px solid #996935;
   padding: 20px;
   width: 200px;
   height: 170px;
