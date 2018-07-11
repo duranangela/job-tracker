@@ -1,5 +1,9 @@
-<h2>Edit <%= @company.name %> here!</h2>
+<section class="edit_company">
+  <h2>Edit <%= @company.name %> here!</h2>
 
-<%= render partial: "form" %><br>
-
-<h4><%= link_to '<< Back to Company List', companies_path %></h4>
+  <div class="edit_form">
+    <%= render partial: "form" %><br>
+  </div>
+  
+  <h4><%= link_to '<< Back to Company List', companies_path %></h4>
+</section>

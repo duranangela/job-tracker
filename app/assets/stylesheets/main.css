@@ -1,6 +1,6 @@
 body {
-  background-color: #C6C5B9;
-  font-family: verdana;
+  background-color: #FFA542;
+  font-family: 'Monaco';
 }
 
 nav {
@@ -13,6 +13,7 @@ nav {
 }
 
 nav p {
+  padding-left: 30px;
   float: left;
   font-size: 25px;
 }
@@ -20,12 +21,17 @@ nav p {
 nav li {
   display: inline;
   float: right;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 10px;
 }
 
 nav li a {
   padding: 15px;
+}
+
+.job_form {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .page {
@@ -45,4 +51,203 @@ nav li a {
 .categories p {
   display: inline;
   padding-right: 10px;
+}
+
+.new_job h2 {
+  font-size: 25px;
+  font-family: 'Monaco';
+  text-align: center;
+  background: yellow;
+  height: 40px;
+}
+.new_job h3 {
+  font-size: 20px;
+  font-family: Georgia sans-serif;
+  text-align: right;
+}
+.new_job h4 {
+  font-size: 20px;
+  font-family: Georgia sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#new_form {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-direction: wrap;
+}
+
+.index_job h1 {
+  text-align: center;
+  background: #FFAE5C;
+}
+
+.index_job ul {
+  padding-left: 450px;
+  font-family: 'Herculanum';
+}
+
+.index_job p {
+  padding-left: 350px;
+  font-family: "Herculanum";
+  font-size: 25px;
+}
+
+.show_job h4 {
+  text-align: right;
+  font-size: 14px;
+}
+
+.show_job h1 {
+  text-align: center;
+  background: yellow;
+}
+
+.show_job p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.show_job h3 {
+  font-size: 12px;
+}
+
+.edit_job h2 {
+  font-family: 'Monaco';
+  background: yellow;
+  font-size: 25px;
+  height: 50px;
+  text-align: center;
+}
+
+.edit_job h4 {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  background: yellow;
+  height: 50px;
+}
+.dashboard_page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+#box_companies {
+  border-color: black;
+  border-radius: 25px;
+  border: 2px solid LightCoral;
+  padding: 20px;
+  width: 200px;
+  height: 170px;
+}
+
+#box_interest {
+  border-color: black;
+  border-radius: 25px;
+  border: 2px solid LightCoral;
+  padding: 20px;
+  width: 200px;
+  height: 170px;
+}
+
+#box_cities {
+  border-color: black;
+  border-radius: 25px;
+  border: 2px solid LightCoral;
+  padding: 20px;
+  width: 200px;
+  height: 170px;
+}
+
+.contacts {
+  text-align: center;
+}
+
+.new_company h2 {
+  text-align: center;
+  background: yellow;
+  height: 50px;
+}
+
+.form_create_comp {
+  text-align: center;
+  font-size: 30px;
+}
+
+.new_company h4 {
+  text-align: left;
+}
+
+.show_company {
+  text-align: center;
+}
+
+.companies {
+  text-align: center;
+}
+
+.edit_company h2 {
+  text-align: center;
+  background: yellow;
+  height: 40px;
+}
+
+.edit_form {
+  text-align: center;
+  height: 300px;
+  font-size: 30px;
+}
+
+.show_category {
+  text-align: center;
+  padding: 10px;
+}
+
+.new_category h2 {
+  text-align: center;
+  background: yellow;
+}
+
+#company_form {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.new_category h4 {
+  padding-top: 150px;
+}
+
+.categories {
+  text-align: center;
+  padding-top: 40px;
+  font-size: 20px;
+}
+
+.index_cat h4 {
+  padding-top: 150px;
+}
+
+.edit_cat h2 {
+  text-align: center;
+  background: yellow;
+  height: 40px;
+}
+
+.form_edit {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.edit_cat h3 {
+  padding-top: 200px;
 }

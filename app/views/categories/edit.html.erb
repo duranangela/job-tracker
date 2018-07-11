@@ -1,5 +1,9 @@
-<h2> Edit <%= @category.title %> </h2>
+<section class="edit_cat">
+  <h2> Edit <%= @category.title %> </h2>
 
-<%= render partial: "form" %><br/>
+  <div class="form_edit">
+    <%= render partial: "form" %><br/>
+  </div>
 
-<%= link_to '<< Back to Category List', categories_path %>
+  <h3><%= link_to '<< Back to Category List', categories_path %></h3>
+</section>

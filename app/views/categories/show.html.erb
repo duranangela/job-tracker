@@ -1,7 +1,10 @@
-<h1><%= @category.title %></h1>
+  <h1><%= @category.title %></h1>
 
-<% @jobs.each do |job| %>
-  <%= link_to "#{job.title} at #{job.company.name}", job_path(job) %><br/>
-<% end %>
-<br/><br/>
-<h4><%= link_to '<< Back to Category List', categories_path %></h4>
+<section class="show_category">
+  <% @jobs.each do |job| %>
+    <%= link_to "#{job.title} at #{job.company.name}", job_path(job) %><br/>
+  <% end %>
+  <br/><br/>
+</section>
+
+  <h4><%= link_to '<< Back to Category List', categories_path %></h4>

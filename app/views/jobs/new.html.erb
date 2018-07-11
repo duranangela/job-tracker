@@ -1,7 +1,11 @@
-<h2>Create a new job!</h2>
+<section class="new_job">
+  <h2>Create a new job!</h2>
 
-<h3><%= link_to 'Create a new Category', new_category_path %><h3><br/><br/>
+  <h3><%= link_to 'Create a new Category', new_category_path %><h3><br/><br/>
 
-<%= render partial: "form" %><br/>
+  <section id="new_form">
+    <%= render partial: "form" %><br/>
+  </section>
 
-<h4><%= link_to '<< Back to Job List', jobs_path %></h4>
+  <h4><%= link_to '<< Back to Job List', jobs_path %></h4>
+</section>
