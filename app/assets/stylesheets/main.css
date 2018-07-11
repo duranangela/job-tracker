@@ -212,3 +212,17 @@ h1 {
   text-align: center;
   padding: 10px;
 }
+
+.new_category h2 {
+  text-align: center;
+  background: yellow;
+}
+
+#company_form {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.new_category h4 {
+  padding-top: 150px;
+}
