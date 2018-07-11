@@ -168,3 +168,22 @@ h1 {
   width: 200px;
   height: 170px;
 }
+
+.contacts {
+  text-align: center;
+}
+
+.new_company h2 {
+  text-align: center;
+  background: yellow;
+  height: 50px;
+}
+
+.form_create_comp {
+  text-align: center;
+  font-size: 30px;
+}
+
+.new_company h4 {
+  text-align: left;
+}

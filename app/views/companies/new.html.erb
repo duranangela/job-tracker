@@ -1,5 +1,9 @@
-<h2>Create a new company here!</h2>
+<section class='new_company'>
+  <h2>Create a new company here!</h2>
 
-<%= render partial: "form" %><br/>
-
-<h4><%= link_to '<< Back to Company List', companies_path %></h4>
+  <div class="form_create_comp">
+    <%= render partial: "form" %><br/>
+  </div>
+    
+  <h4><%= link_to '<< Back to Company List', companies_path %></h4>
+</section>
