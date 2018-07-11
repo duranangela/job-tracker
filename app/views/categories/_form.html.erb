@@ -1,7 +1,11 @@
-<%= form_for @category do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.submit %>
-<% end %>
-  
+<section class="form">
+  <%= form_for @category do |f| %>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+</section>
