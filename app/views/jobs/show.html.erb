@@ -1,7 +1,7 @@
-<div class=page>
-  <h1 class='title-line'><%= @job.title %> at <%= link_to @company.name, company_path(@company) %></h1>
-  <p class='title-line'><%= link_to "Edit", edit_job_path(@job) %></p>
-  <p class='title-line'><%= link_to "Delete", job_path(@job), method: "delete" %></p>
+<div class=show_job>
+  <h1><%= @job.title %> at <%= link_to @company.name, company_path(@company) %></h1>
+  <h4><%= link_to "Edit", edit_job_path(@job) %></h4>
+  <h4><%= link_to "Delete", job_path(@job), method: "delete" %></h4>
 
   <p>City: <%= @job.city %></p>
 

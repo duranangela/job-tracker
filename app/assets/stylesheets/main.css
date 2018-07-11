@@ -90,3 +90,22 @@ nav li a {
   font-family: "Herculanum";
   font-size: 25px;
 }
+
+.show_job h4 {
+  text-align: right;
+  font-size: 14px;
+}
+
+.show_job h1 {
+  text-align: center;
+  background: yellow;
+}
+
+.show_job p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.show_job h3 {
+  font-size: 12px;
+}
