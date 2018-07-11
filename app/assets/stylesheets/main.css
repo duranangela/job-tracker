@@ -46,3 +46,27 @@ nav li a {
   display: inline;
   padding-right: 10px;
 }
+
+.new_job h2 {
+  font-size: 25px;
+  font-family: 'Monaco';
+  text-align: center;
+}
+.new_job h3 {
+  font-size: 20px;
+  font-family: Georgia sans-serif;
+  text-align: right;
+}
+.new_job h4 {
+  font-size: 20px;
+  font-family: Georgia sans-serif;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.new_form {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-direction: wrap; 
+}
