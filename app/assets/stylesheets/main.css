@@ -1,6 +1,6 @@
 body {
   background-color: #C6C5B9;
-  font-family: verdana;
+  font-family: 'Monaco';
 }
 
 nav {
@@ -13,6 +13,7 @@ nav {
 }
 
 nav p {
+  padding-left: 30px;
   float: left;
   font-size: 25px;
 }
@@ -20,7 +21,7 @@ nav p {
 nav li {
   display: inline;
   float: right;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 10px;
 }
 
@@ -51,6 +52,8 @@ nav li a {
   font-size: 25px;
   font-family: 'Monaco';
   text-align: center;
+  background: yellow;
+  height: 40px;
 }
 .new_job h3 {
   font-size: 20px;
@@ -61,12 +64,13 @@ nav li a {
   font-size: 20px;
   font-family: Georgia sans-serif;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.new_form {
+#new_form {
   font-size: 20px;
   display: flex;
   flex-direction: row;
-  flex-direction: wrap; 
+  flex-direction: wrap;
 }
