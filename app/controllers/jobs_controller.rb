@@ -1,20 +1,13 @@
 class JobsController < ApplicationController
   def index
     if params[:location]
-      @jobs = Job.where(city: params[:location])
+      @jobs = Job.location_params(params)
       @header = "#{params[:location]} Jobs"
     elsif params[:category]
-      cat = Category.where(title: params[:category]).first.id
-      @jobs = Job.where(category_id: cat)
+      @jobs = Job.category_params(params)
       @header = "#{params[:category]} Jobs"
     elsif params[:sort]
-      if params[:sort]=='interest'
-        @jobs = Job.sort_level_interest
-        @header = 'Jobs sorted by Level of Interest'
-      elsif params[:sort]=='location'
-        @jobs = Job.city_sort
-        @header = 'Jobs sorted by City'
-      end
+      params_sort(params)
     else
       @jobs = Job.all
       @header = "All Jobs"
@@ -61,7 +54,6 @@ class JobsController < ApplicationController
 
   def destroy
     job = Job.find(params[:id])
-    # company = job.company
     job.destroy
 
     flash[:success] = "#{job.title} was successfully deleted!"
@@ -72,5 +64,15 @@ class JobsController < ApplicationController
 
   def job_params
     params.require(:job).permit(:title, :description, :level_of_interest, :city, :category_id, :company_id)
+  end
+
+  def params_sort(params)
+    if params[:sort]=='interest'
+      @jobs = Job.sort_level_interest
+      @header = 'Jobs sorted by Level of Interest'
+    else params[:sort]=='location'
+      @jobs = Job.city_sort
+      @header = 'Jobs sorted by City'
+    end
   end
 end
